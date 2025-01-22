@@ -1,6 +1,6 @@
-from flask import Flask, jsonify
-from flask_cors import CORS
-import mysql.connector
+from flask import Flask, jsonify # type: ignore
+from flask_cors import CORS # type: ignore
+import mysql.connector # type: ignore
 
 app = Flask(__name__)
 
