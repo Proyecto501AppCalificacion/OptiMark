@@ -8,16 +8,16 @@ El proyecto está compuesto por dos partes principales: el backend (servidor) y 
 
 ### Backend:
 
-- **Python**: Lenguaje de programación utilizado para desarrollar la API y lógica de negocio del servidor.
-- **MySQL**: Sistema de gestión de bases de datos utilizado para almacenar los datos relacionados con los exámenes y calificaciones.
-- **Flask**: Framework de Python para construir la API RESTful.
-- **Flask-CORS**: Extensión de Flask que permite manejar las solicitudes de origen cruzado (CORS).
-- **mysql-connector-python**: Conector de Python para interactuar con MySQL.
+- **Python**: lenguaje de programación utilizado para desarrollar la API y lógica de negocio del servidor.
+- **MySQL**: sistema de gestión de bases de datos utilizado para almacenar los datos relacionados con los exámenes y calificaciones.
+- **Flask**: framework de Python para construir la API RESTful.
+- **Flask-CORS**: extensión de Flask que permite manejar las solicitudes de origen cruzado (CORS).
+- **mysql-connector-python**: conector de Python para interactuar con MySQL.
 
 ### Frontend:
 
-- **React Native**: Framework de JavaScript para construir aplicaciones móviles nativas.
-- **Expo**: Plataforma para el desarrollo de aplicaciones móviles utilizando React Native, proporcionando herramientas y servicios adicionales para facilitar el desarrollo.
+- **React Native**: framework de JavaScript para construir aplicaciones móviles nativas.
+- **Expo**: plataforma para el desarrollo de aplicaciones móviles utilizando React Native, proporcionando herramientas y servicios adicionales para facilitar el desarrollo.
 
 ## Instalación
 
@@ -39,27 +39,27 @@ El proyecto está compuesto por dos partes principales: el backend (servidor) y 
 
 1. Navega a la carpeta del frontend: cd OptiMark/frontend
 2. Instala las dependencias con npm: npm install
-3. Iniciar la aplicacion de desarrollo: npn run web
+3. Inicia la aplicacion de desarrollo: npn run web
 
 
 ## Uso
 
-- **Backend**: El servidor se ejecuta en un puerto local, por ejemplo: `http://localhost:5000`.
-- **Frontend**: La aplicación móvil puede ejecutarse en un emulador o dispositivo físico utilizando Expo.
+- **Backend**: el servidor se ejecuta en un puerto local, por ejemplo: `http://localhost:5000`.
+- **Frontend**: la aplicación móvil puede ejecutarse en un emulador o dispositivo físico utilizando Expo.
 
 
 ## Dependencias
 
 ### Backend:
 
-- **Flask**: Framework web para Python.
-- **Flask-CORS**: Soporte para Cross-Origin Resource Sharing.
-- **mysql-connector-python**: Conector de Python para bases de datos MySQL.
+- **Flask**: framework web para Python.
+- **Flask-CORS**: soporte para Cross-Origin Resource Sharing.
+- **mysql-connector-python**: conector de Python para bases de datos MySQL.
 
 ### Frontend:
 
-- **React Native**: Framework para construir aplicaciones móviles nativas.
-- **Expo**: Herramienta que acelera el desarrollo y despliegue con React Native.
+- **React Native**: framework para construir aplicaciones móviles nativas.
+- **Expo**: herramienta que acelera el desarrollo y despliegue con React Native.
 
 
 ## Derechos reservados
