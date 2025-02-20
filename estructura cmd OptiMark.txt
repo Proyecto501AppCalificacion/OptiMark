@@ -1,0 +1,88 @@
+Microsoft Windows [Versión 10.0.26100.3037]
+(c) Microsoft Corporation. Todos los derechos reservados.
+
+C:\Users\B2B>cd C:\OptiMark
+
+C:\OptiMark>tree /F
+Listado de rutas de carpetas para el volumen Acer
+El número de serie del volumen es 86C9-55BD
+C:.
+│   ExtOptiMark.txt
+│   Modelo EER Optimark.mwb
+│   Modelo EER Optimark.mwb.bak
+│   README.md
+│
+├───backend
+│   │   app.py
+│   │   optimark.sql
+│   │
+│   └───venv
+│       │   Lib.zip
+│       │   pyvenv.cfg
+│       │
+│       └───Scripts
+│               activate
+│               activate.bat
+│               Activate.ps1
+│               deactivate.bat
+│               flask.exe
+│               pip.exe
+│               pip3.12.exe
+│               pip3.exe
+│               python.exe
+│               pythonw.exe
+│
+└───frontend
+    └───MiAppFrontend
+        │   .gitignore
+        │   App.js
+        │   app.json
+        │   index.js
+        │   node_modules.zip
+        │   package-lock.json
+        │   package.json
+        │   tsconfig.json
+        │
+        ├───.expo
+        │   │   devices.json
+        │   │   README.md
+        │   │
+        │   └───web
+        │       └───cache
+        │           └───production
+        │               └───images
+        │                   └───favicon
+        │                       └───favicon-24272cdaeff82cc5facdaccd982a6f05b60c4504704bbf94c19a6388659880bb-contain-transparent
+        │                               favicon-48.png
+        │
+        ├───assets
+        │   ├───fonts
+        │   │       Akatab-Black.ttf
+        │   │       Akatab-Bold.ttf
+        │   │       Akatab-ExtraBold.ttf
+        │   │       Akatab-Medium.ttf
+        │   │       Akatab-Regular.ttf
+        │   │       Akatab-SemiBold.ttf
+        │   │       SpaceMono-Regular.ttf
+        │   │
+        │   └───images
+        │           adaptive-icon.png
+        │           cerrar_ventana.png
+        │           favicon.png
+        │           icon.png
+        │           logo.png
+        │           logo_facebook.png
+        │           logo_google.png
+        │           logo_mostrar_clave.png
+        │           splash-icon.png
+        │
+        ├───screens
+        │       inicioScreen.js
+        │       ya_tengo_cuenta.js
+        │
+        └───src
+            └───services
+                    api.js
+
+
+C:\OptiMark>
