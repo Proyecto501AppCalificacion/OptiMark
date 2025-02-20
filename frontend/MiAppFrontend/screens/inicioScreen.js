@@ -15,7 +15,7 @@ const InicioScreen = () => {  // Define el componente InicioScreen con el prop '
     return null;  // Retorna 'null' mientras se carga la fuente, no renderiza nada
   }
 
-  // Esto es un comentario de prueba
+  // prueba para ver cambios visual
 
   return (  // El componente renderiza la interfaz si las fuentes están cargadas
     <View style={styles.container}>
