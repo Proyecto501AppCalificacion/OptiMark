@@ -14,7 +14,7 @@ const InicioScreen = () => {  // Define el componente InicioScreen con el prop '
   if (!fontsLoaded) {  
     return null;  // Retorna 'null' mientras se carga la fuente, no renderiza nada
   }
-
+      /// prueba 3
   return (  // El componente renderiza la interfaz si las fuentes están cargadas
     <View style={styles.container}>
       <Image
