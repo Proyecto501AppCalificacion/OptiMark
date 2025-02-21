@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button, FlatList, StyleSheet } from 'react-native';
 import { getData } from './src/services/api';  // Importamos la función de obtener datos
-import InicioScreen from './screens/inicioScreen';
+import InicioScreen from './screens/1_inicio_de_app/inicio_de_app';
 
 export default function App() {
   const [data, setData] = useState([]);
