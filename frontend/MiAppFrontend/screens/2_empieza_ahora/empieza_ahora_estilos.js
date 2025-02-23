@@ -9,6 +9,7 @@ const theme = {
     border: "#B1B1B1",
     buttonBorder: "#104814",
     black: "black",
+    inputbackground: "#08172D",
   },
   fonts: {
     bold: 'Akatab-Black',
@@ -39,7 +40,7 @@ export default StyleSheet.create({
 
   backButton: {
     position: 'absolute',
-    top: 50, // Bajado un poco más
+    top: 50, // Ajustado
     left: 20,
     padding: 10,
   },
@@ -50,18 +51,16 @@ export default StyleSheet.create({
   },
 
   logo: {
-    width: 50,
-    height: 50,
+    width: 60, // Aumentado para mejor visibilidad
+    height: 60,
     marginBottom: 10,
   },
 
   title: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    marginBottom: 20,
     fontSize: 30,
     fontFamily: theme.fonts.bold,
     color: theme.colors.primary,
+    marginBottom: 20,
   },
 
   sectionTitle: {
@@ -69,30 +68,32 @@ export default StyleSheet.create({
     fontWeight: 'bold',
     marginTop: 20,
     marginBottom: 10,
-    color: '#555',
+    color: theme.colors.textSecondary, // Ahora usa el color del tema
   },
 
   input: {
     width: '100%',
-    height: 40,
+    height: 45,
     borderWidth: 1,
-    borderColor: '#ccc',
-    borderRadius: 5,
-    paddingHorizontal: 10,
-    marginBottom: 10,
-    backgroundColor: '#08172D',
+    borderColor: theme.colors.border,
+    borderRadius: 17, // Más redondeado
+    paddingHorizontal: 15,
+    marginBottom: 12,
+    backgroundColor: theme.colors.inputbackground,
+    color: theme.colors.border,
   },
 
   createAccountButton: {
-    backgroundColor: '#2AC034',
-    paddingVertical: 12,
+    backgroundColor: theme.colors.primary,
+    paddingVertical: 14,
     paddingHorizontal: 20,
-    borderRadius: 5,
+    borderRadius: 10, // Más estilizado
     marginTop: 20,
+    alignItems: 'center',
   },
 
   createAccountButtonText: {
-    color: '#040C17',
+    color: theme.colors.secondary,
     fontSize: 16,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -103,7 +104,7 @@ export default StyleSheet.create({
     color: '#777',
     textAlign: 'center',
     position: 'absolute',
-    bottom: 20, // Ahora siempre estará abajo
+    bottom: 20, // Siempre estará abajo
     width: '100%',
   },
 });
