@@ -1,27 +1,50 @@
 import React from 'react';
-import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
 import styles from './empieza_ahora_estilos';
 
 const Empieza_ahora = () => {
-  return (
-    <View style={styles.container}>
-      <Image source={require('../../assets/images/logo.png')} style={styles.reactLogo} />
-      <Text style={styles.title}>OptiMark</Text>
-      <Text style={styles.slogan}>La forma inteligente de calificar {'\n'}exámenes</Text>
+    return (
+      <View style={styles.container}>
 
-
-      <View style={styles.footerButtonsContainer}>
-        <TouchableOpacity style={styles.startButton}>
-          <Text style={styles.startButtonText}>EMPIEZA AHORA</Text>
-          <Text style={styles.infoText}>REGISTRO</Text>
+        <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+          <Image 
+            source={require('../../assets/images/cerrar_ventana.png')} 
+            style={styles.backIcon} 
+          />
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButtonText}>YA TENGO UNA CUENTA</Text>
-        </TouchableOpacity>
+        <View style={styles.formContainer}>
+          <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+          <Text style={styles.title}>OptiMark</Text>
+
+          <View style={styles.inputContainer}>
+            <Text style={styles.sectionTitle}>Datos para el registro</Text>
+            <TextInput placeholder="Nombre completo" placeholderTextColor="#B1B1B1" style={styles.input} />
+            <TextInput placeholder="Ingresa correo electrónico" placeholderTextColor="#B1B1B1" style={styles.input} />
+            <TextInput placeholder="Confirmar correo electrónico" placeholderTextColor="#B1B1B1" style={styles.input} />
+          </View>
+
+          <View style={styles.inputContainer}>
+            <Text style={styles.sectionTitle}>Datos personales</Text>
+            <TextInput placeholder="Teléfono móvil" placeholderTextColor="#B1B1B1" style={styles.input} />
+            <TextInput placeholder="Cédula" placeholderTextColor="#B1B1B1" style={styles.input} />
+            <TextInput placeholder="Contraseña" placeholderTextColor="#B1B1B1" secureTextEntry={true} style={styles.input} />
+            <TextInput placeholder="Confirmar contraseña" placeholderTextColor="#B1B1B1" secureTextEntry={true} style={styles.input} />
+
+            <TouchableOpacity style={styles.createAccountButton}>
+              <Text style={styles.createAccountButtonText}>CREAR CUENTA</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+
+        <Text style={styles.privacyText}>
+          Al registrarse en OptiMark, acepta nuestros Términos y Política de privacidad.
+        </Text>
+
       </View>
-    </View>
-  );
+    );
 };
 
 export default Empieza_ahora;
+
+
