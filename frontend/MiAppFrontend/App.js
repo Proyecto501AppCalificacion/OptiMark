@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { getData } from './src/services/api';
-import Inicio_de_app from './screens/1_inicio_de_app/inicio_de_app';
+import Empieza_ahora from './screens/2_empieza_ahora/empieza_ahora';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Inicio_de_app />
+      <Empieza_ahora />
     </View>
   );
 }

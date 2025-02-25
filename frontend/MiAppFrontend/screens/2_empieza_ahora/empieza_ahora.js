@@ -7,7 +7,7 @@ const Empieza_ahora = () => {
     <View style={styles.container}>
       <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Image 
-          source={require('../../assets/images/cerrar_ventana.png')} 
+          source={require('../../assets/images/atras.png')} 
           style={styles.backIcon} 
         />
       </TouchableOpacity>
