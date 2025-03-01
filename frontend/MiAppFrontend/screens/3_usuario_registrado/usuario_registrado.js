@@ -1,65 +1,44 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
-import { useFonts } from 'expo-font';
+import { View, Image, Text, TextInput, TouchableOpacity } from 'react-native';
+import styles from './usuario_registrado_estilos';
 
-const Ya_tengo_cuenta = () => {
-  // ... resto del código (suponiendo que tienes más componentes aquí)
-
-  return (
+const Usuario_registrado = () => {
+    return (
     <View style={styles.container}>
-      {/* ... resto del contenido (logo, otros elementos) */}
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
+        <Image 
+          source={require('../../assets/images/atras.png')} 
+          style={styles.backIcon} 
+        />
+      </TouchableOpacity>
 
-      <View style={styles.headerButtonsContainer}>
-        <TouchableOpacity style={styles.startButton}>
-          <Text style={styles.startButtonText}>INGRESAR</Text>
-        </TouchableOpacity>
+      <Image source={require('../../assets/images/logo.png')} style={styles.logo} />
+      <Text style={styles.title}>OptiMark</Text>
 
-        <TouchableOpacity style={styles.loginButton}>
-          <Text style={styles.loginButtonText}>REESTABLECER CONTRASEÑA</Text>
-        </TouchableOpacity>
+      <View style={styles.inputContainer}>
+        <Text style={styles.sectionTitle}>Datos para el registro</Text>
+        <TextInput placeholder="Nombre completo" placeholderTextColor="#B1B1B1" style={styles.input} />
+        <TextInput placeholder="Ingresa correo electrónico" placeholderTextColor="#B1B1B1" style={styles.input} />
+        <TextInput placeholder="Confirmar correo electrónico" placeholderTextColor="#B1B1B1" style={styles.input} />
       </View>
 
-      {/* ... resto del contenido */}
+      <View style={styles.inputContainer}>
+        <Text style={styles.sectionTitle}>Datos personales</Text>
+        <TextInput placeholder="Teléfono móvil" placeholderTextColor="#B1B1B1" style={styles.input} />
+        <TextInput placeholder="Cédula" placeholderTextColor="#B1B1B1" style={styles.input} />
+        <TextInput placeholder="Contraseña" placeholderTextColor="#B1B1B1" secureTextEntry={true} style={styles.input} />
+        <TextInput placeholder="Confirmar contraseña" placeholderTextColor="#B1B1B1" secureTextEntry={true} style={styles.input} />
+        <TouchableOpacity style={styles.createAccountButton}>
+          <Text style={styles.createAccountButtonText}>CREAR CUENTA</Text>
+        </TouchableOpacity>
+
+      </View>
+      
+      <Text style={styles.privacyText}>
+        Al registrarse en OptiMark, acepta nuestros <Text style={styles.privacyBold}>Términos</Text> y <Text style={styles.privacyBold}>Política de privacidad</Text>.
+      </Text>
     </View>
   );
 };
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#040C17',
-  },
-
-  headerButtonsContainer: {
-    position: 'absolute', // Posicionamiento absoluto para mayor control
-    top: '30%', // Ajusta este valor según sea necesario
-    width: '100%', // Ocupa todo el ancho de la pantalla
-    alignItems: 'center', // Centra los botones horizontalmente
-  },
-
-  startButton: {
-    // Estilos para el botón "INGRESAR"
-    // ...
-  },
-
-  startButtonText: {
-    // Estilos para el texto del botón "INGRESAR"
-    // ...
-  },
-
-  loginButton: {
-    // Estilos para el botón "REESTABLECER CONTRASEÑA"
-    // ...
-  },
-
-  loginButtonText: {
-    // Estilos para el texto del botón "REESTABLECER CONTRASEÑA"
-    // ...
-  },
-
-  // ... otros estilos
-});
-
-export default Ya_tengo_cuenta;
+export default Usuario_registrado;
