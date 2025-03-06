@@ -11,7 +11,7 @@ const styles = StyleSheet.create({
 
   backButton: {
     position: 'absolute',
-    top: 50,
+    top: 50, // Ajustado
     left: 20,
     padding: 10,
   },
@@ -23,12 +23,12 @@ const styles = StyleSheet.create({
 
   title: {
     position: 'absolute',
-    top: 90,
+    top: 100,
     left: 0,
     right: 0,
     textAlign: 'center',
     color: '#fff',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 
@@ -66,13 +66,13 @@ const styles = StyleSheet.create({
 
   eyeIcon: {
     color: '#5A5A5A',
-    fontSize: 22,
+    fontSize: 22, 
   },
 
   button: {
     backgroundColor: '#2AC034',
-    width: '90%', // Ajustado para mejor alineación
-    paddingVertical: 14,
+    width: '100%', // Ajustado para mejor alineación
+    paddingVertical: 12,
     alignItems: 'center',
     borderRadius: 8,
     marginTop: 20, // Espaciado uniforme
@@ -87,7 +87,7 @@ const styles = StyleSheet.create({
   resetPasswordText: {
     color: '#2AC034',
     fontSize: 14,
-    marginTop: 15,
+    marginTop: 10,
     textAlign: 'center',
   },
 
@@ -103,7 +103,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     width: '90%',
-    marginTop: 200,
+    marginTop: 150,
   },
 
   socialButton: {
