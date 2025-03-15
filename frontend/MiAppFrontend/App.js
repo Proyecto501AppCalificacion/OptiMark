@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { getData } from './src/services/api';
-import Usuario_registrado from './screens/3_usuario_registrado/usuario_registrado';
+import Pie_de_pagina from './screens/10_componentes/inferior/pie_de_pagina';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Usuario_registrado />
+      <Pie_de_pagina />
     </View>
   );
 }
