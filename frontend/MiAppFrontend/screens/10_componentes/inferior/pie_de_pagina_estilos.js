@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
       tintColor: '#2AC034', // Color verde cuando está activo
   },
   iconInactive: {
-      tintColor: '#A0A0A0', // Color gris cuando está inactivo
+      tintColor: '#B1B1B1', // Color gris cuando está inactivo
   },
   labelStyle: {
       fontSize: 12,
@@ -49,7 +49,7 @@ const styles = StyleSheet.create({
       color: '#2AC034', // Texto en verde cuando está activo
   },
   labelInactive: {
-      color: '#A0A0A0', // Texto en gris cuando está inactivo
+      color: '#B1B1B1', // Texto en gris cuando está inactivo
   },
 });
 

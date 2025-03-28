@@ -6,7 +6,7 @@ const encabezadoEstilos = {
       right: 0,
     },
     contenedor: {
-      backgroundColor: '#0A1F44',
+      backgroundColor: '#040C17',
       alignItems: 'center',
       justifyContent: 'center',
       paddingVertical: 20,
@@ -18,7 +18,7 @@ const encabezadoEstilos = {
       resizeMode: 'contain',
     },
     titulo: {
-      color: '#00FF00',
+      color: '#2AC034',
       fontSize: 22,
       fontWeight: 'bold',
     },
