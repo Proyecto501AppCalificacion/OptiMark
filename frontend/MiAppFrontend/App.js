@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { getData } from './src/services/api';
-import Encabezado from './screens/10_componentes/superior/encabezado';
+import Usuario_registrado from './screens/3_usuario_registrado/usuario_registrado';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Encabezado />
+      <Usuario_registrado />
     </View>
   );
 }

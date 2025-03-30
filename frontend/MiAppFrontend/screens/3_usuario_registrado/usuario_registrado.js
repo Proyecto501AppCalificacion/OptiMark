@@ -10,10 +10,10 @@ const Usuario_registrado = () => {
         <Image source={require('../../assets/images/atras.png')} style={styles.backIcon} />
       </TouchableOpacity>
 
-      {/* Título */}
+      <Image source={require('../../assets/images/logo.png')} style={styles.reactLogo} />
+      <Text style={styles.titlelogo}>OptiMark</Text>
       <Text style={styles.title}>INGRESA TUS DATOS</Text>
 
-      {/* Inputs */}
       <TextInput 
         style={styles.inputContainer} 
         placeholder="Ingresa correo electrónico" 
@@ -27,7 +27,6 @@ const Usuario_registrado = () => {
           placeholderTextColor="#6F6F6F"
           secureTextEntry
         />
-        {/* Icono de ojo */}
         <Image source={require('../../assets/images/logo_mostrar_clave.png')} style={styles.eyeIcon} />
       </View>
 
