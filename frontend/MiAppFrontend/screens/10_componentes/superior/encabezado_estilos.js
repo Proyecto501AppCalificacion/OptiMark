@@ -1,5 +1,6 @@
 const encabezadoEstilos = {
     encabezadoContainer: {
+      
       position: 'absolute',
       top: 0,
       left: 0,
@@ -15,6 +16,7 @@ const encabezadoEstilos = {
       width: 60,
       height: 60,
       marginBottom: 10,
+      marginTop: 30,
       resizeMode: 'contain',
     },
     titulo: {
