@@ -3,9 +3,9 @@ import { StyleSheet } from 'react-native';
 const encabezadoEstilos = StyleSheet.create({
   encabezadoContainer: {
     width: '100%',
-    backgroundColor: '#0A1F44',
+    backgroundColor: '#040C17',
     paddingTop: 40, // Espacio para notch en iOS
-    paddingBottom: 10,
+    paddingBottom: 25,
     alignItems: 'center',
     position: 'absolute', // Fijado en la parte superior
     top: 0, // Alineado arriba de la pantalla
@@ -32,7 +32,7 @@ const encabezadoEstilos = StyleSheet.create({
     marginBottom: 5, // Espacio entre el logo y el texto
   },
   titulo: {
-    color: '#00FF00',
+    color: '#2AC034',
     fontSize: 22,
     fontWeight: 'bold',
     textAlign: 'center',
@@ -48,7 +48,7 @@ const encabezadoEstilos = StyleSheet.create({
   },
   textoCerrarSesion: {
     color: '#040C17',
-    fontSize: 14,
+    fontSize: 10,
     fontWeight: 'bold',
   },
 });
