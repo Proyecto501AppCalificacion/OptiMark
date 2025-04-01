@@ -43,8 +43,8 @@ const styles = StyleSheet.create({
   
 
   backIcon: {
-    width: 24,
-    height: 24,
+    width: 30,
+    height: 30,
   },
 
   title: {
@@ -65,11 +65,19 @@ const styles = StyleSheet.create({
     marginBottom: 10, // Reduce separación con los demás campos
     color: theme.colors.textSecondary,
     fontSize: 16,
+    
   },
 
   passwordContainer: {
     flexDirection: 'row',
     alignItems: 'center',
+    width: '100%',
+  },
+
+  passwordInput: {
+    flex: 1,
+    color: theme.colors.textSecondary,
+    fontSize: 16,
     borderWidth: 1,
     borderColor: theme.colors.border,
     borderRadius: 15,
@@ -79,16 +87,13 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 
-  passwordInput: {
-    flex: 1,
-    color: theme.colors.textSecondary,
-    fontSize: 16,
-  },
-
   eyeIcon: {
-    width: 20,
+    width: 25,
     height: 20,
     color: theme.colors.primary,
+    position: 'absolute',
+    right: '14px',
+    bottom: '23px',
   },
 
   button: {
@@ -111,6 +116,7 @@ const styles = StyleSheet.create({
     fontSize: 14,
     marginTop: 10, // Reduce separación con el botón
     textAlign: 'center',
+    fontWeight: 'bold',
   },
 
   footer: {
@@ -138,6 +144,7 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 20,
     width: '48%',
+    justifyContent: 'center',
   },
 
   socialIcon: {
@@ -148,6 +155,7 @@ const styles = StyleSheet.create({
   socialText: {
     color: theme.colors.textSecondary,
     marginLeft: 10,
+    fontWeight: 'bold',
   },
 
   footerText: {
@@ -183,6 +191,20 @@ const styles = StyleSheet.create({
     width: '100%',
   },
 
+  reactLogo: {
+    width: 50,
+    height: 50,
+    marginBottom: 10,
+    
+  },
+
+  titlelogo: {
+    textAlign: 'center',
+    color: theme.colors.primary,
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: 20, 
+  },
 
   
 });
