@@ -41,13 +41,13 @@ const encabezadoEstilos = StyleSheet.create({
     position: 'absolute', // Posición absoluta para que no afecte la distribución del contenido
     right: 20, // Ubicado en la esquina derecha
     top: -15, // Lo coloca más arriba del logo
-    backgroundColor: '#FF3B30',
-    paddingVertical: 4,
-    paddingHorizontal: 7,
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 1,
+    paddingHorizontal: 3,
     borderRadius: 4,
   },
   textoCerrarSesion: {
-    color: '#FFFFFF',
+    color: '#040C17',
     fontSize: 14,
     fontWeight: 'bold',
   },
