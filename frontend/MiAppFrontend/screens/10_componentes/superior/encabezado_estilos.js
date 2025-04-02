@@ -4,7 +4,7 @@ const encabezadoEstilos = StyleSheet.create({
   encabezadoContainer: {
     width: '100%',
     backgroundColor: '#040C17',
-    paddingTop: 40, // Espacio para notch en iOS
+    paddingTop: 50, // Espacio para notch en iOS
     paddingBottom: 25,
     alignItems: 'center',
     position: 'absolute', // Fijado en la parte superior
@@ -23,7 +23,7 @@ const encabezadoEstilos = StyleSheet.create({
   },
   logoContainer: {
     alignItems: 'center', // Centra el logo y el texto
-    marginTop: 15, // Espacio entre el logo y el texto
+    marginTop: 35, // Aumenté este valor de 15 a 35 para mover el logo hacia abajo
   },
   logo: {
     width: 50,
@@ -39,16 +39,16 @@ const encabezadoEstilos = StyleSheet.create({
   },
   botonCerrarSesion: {
     position: 'absolute', // Posición absoluta para que no afecte la distribución del contenido
-    right: 20, // Ubicado en la esquina derecha
-    top: -15, // Lo coloca más arriba del logo
+    right: 20, // 20 unidades de espacio desde la derecha
+    top: 10, // 10 unidades de espacio desde la parte superior
     backgroundColor: '#FFFFFF',
-    paddingVertical: 1,
-    paddingHorizontal: 3,
+    paddingVertical: 6,
+    paddingHorizontal: 10,
     borderRadius: 4,
   },
   textoCerrarSesion: {
     color: '#040C17',
-    fontSize: 10,
+    fontSize: 12, // Aumenté ligeramente el tamaño del texto para hacerlo más legible
     fontWeight: 'bold',
   },
 });
