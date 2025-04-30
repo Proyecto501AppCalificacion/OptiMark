@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { getData } from './src/services/api';
-import Escaneo  from './screens/6_mod_escaneo/mod_escaneo';
+import ModEscaneo  from './screens/6_mod_escaneo/mod_escaneo';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Escaneo />
+      <ModEscaneo />
     </View>
   );
 }
