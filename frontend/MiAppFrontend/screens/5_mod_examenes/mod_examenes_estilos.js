@@ -97,6 +97,7 @@ export default StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.25,
         shadowRadius: 4,
+        maxHeight: '90%',
     },
 
     modalTitle: {
@@ -150,5 +151,44 @@ export default StyleSheet.create({
         color: 'white',
         fontWeight: 'bold',
     },
+
+    preguntaBlock: {
+        marginBottom: 20,
+        backgroundColor: '#fff',
+        padding: 10,
+        borderRadius: 10,
+        elevation: 2,
+    },
+    opcionRow: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginBottom: 5,
+    },
+    opcionInput: {
+        flex: 1,
+        borderWidth: 1,
+        borderColor: '#ccc',
+        padding: 8,
+        borderRadius: 5,
+        marginRight: 10,
+    },
+    radioButton: {
+        width: 24,
+        height: 24,
+        borderRadius: 12,
+        borderWidth: 2,
+        borderColor: '#777',
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    radioButtonSelected: {
+        backgroundColor: '#4CAF50',
+        borderColor: '#4CAF50',
+    },
+    radioText: {
+        color: '#fff',
+        fontWeight: 'bold',
+    },
+    
 });
 

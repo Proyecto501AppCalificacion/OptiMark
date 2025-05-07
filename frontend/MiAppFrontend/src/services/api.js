@@ -12,3 +12,16 @@ export const getData = async () => {
     throw error;
   }
 };
+
+
+const POST_URL = 'http://127.0.0.1:5000/api/examen'; // debe coincidir con tu ruta Flask
+
+export const saveExamen = async (nuevoExamen) => {
+  try {
+    const response = await axios.post(POST_URL, nuevoExamen);
+    return response.data;
+  } catch (error) {
+    console.error('Error al guardar el examen:', error);
+    throw error;
+  }
+};

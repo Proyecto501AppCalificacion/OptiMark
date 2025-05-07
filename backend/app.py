@@ -1,19 +1,20 @@
-from flask import Flask, jsonify, request # type: ignore
-from flask_cors import CORS # type: ignore
-import mysql.connector # type: ignore
+from flask import Flask, jsonify, request  # type: ignore
+from flask_cors import CORS  # type: ignore
+import mysql.connector  # type: ignore
 
 app = Flask(__name__)
 
-# Habilitar CORS para todas las rutas y todos los orígenes
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8081"}})
+# Configurar CORS para permitir solicitudes desde tu frontend (localhost:8081)
+CORS(app)
+       # Agrega esto si tu frontend envía cookies
 
 # Conexión a la base de datos MySQL
 def get_db_connection():
     connection = mysql.connector.connect(
-        host='localhost',        # Dirección del servidor MySQL
-        user='root',             # Usuario de MySQL
-        password='Optimark2025', # Contraseña de MySQL
-        database='optimark'      # Nombre de tu base de datos
+        host='localhost',
+        user='root',
+        password='Optimark2025',
+        database='optimark'
     )
     return connection
 
@@ -21,51 +22,64 @@ def get_db_connection():
 def home():
     return 'Servidor Flask funcionando correctamente'
 
-# Ruta para obtener datos de estudiantes
+# Ruta GET para obtener todos los exámenes
 @app.route('/api/data', methods=['GET'])
 def get_data():
     connection = get_db_connection()
     cursor = connection.cursor(dictionary=True)
-    cursor.execute('SELECT * FROM examenes')  # Ejecuta la consulta en MySQL
-    data = cursor.fetchall()
+    cursor.execute("SELECT * FROM examenes")
+    examenes = cursor.fetchall()
     cursor.close()
     connection.close()
-    return jsonify(data)
+    return jsonify(examenes), 200
 
-# Ruta para insertar datos en la tabla examenes
+# Ruta POST para insertar examen y preguntas
 @app.route('/api/examen', methods=['POST'])
 def create_examen():
-    # Obtener los datos desde el cuerpo de la solicitud (JSON)
     data = request.get_json()
+    examen = data.get('examenData')
 
-    # Datos que llegan desde el frontend
-    nombre_examen = data.get('nombre_examen')  # Nuevo campo
-    materia = data.get('materia')
-    colegio = data.get('colegio')
-    cantidad_preguntas = data.get('cantidad_preguntas')
-    creado_por = data.get('creado_por')
-    # La fecha y hora se genera automáticamente con CURRENT_TIMESTAMP, no es necesario pasarlo
+    if not examen:
+        return jsonify({"error": "Datos de examen faltantes"}), 400
 
-    # Conexión a la base de datos
+    nombre_examen = examen.get('nombre_examen')
+    materia = examen.get('materia')
+    colegio = examen.get('colegio')
+    cantidad_preguntas = examen.get('cantidad_preguntas')
+    creado_por = examen.get('creado_por')
+    preguntas = data.get('preguntasData')
+
+    if not nombre_examen:
+        return jsonify({"error": "'nombre_examen' no puede ser vacío o nulo"}), 400
+
     connection = get_db_connection()
     cursor = connection.cursor()
 
-    # Inserción de los datos en la tabla examenes
     cursor.execute("""
         INSERT INTO examenes (nombre_examen, materia, colegio, cantidad_preguntas, creado_por)
         VALUES (%s, %s, %s, %s, %s)
     """, (nombre_examen, materia, colegio, cantidad_preguntas, creado_por))
 
-    # Guardar los cambios
-    connection.commit()
+    examen_id = cursor.lastrowid
+    print(preguntas)
+    for pregunta in preguntas:
+        texto = pregunta.get('pregunta')
+        opcion_a = pregunta.get('opcion_a')
+        opcion_b = pregunta.get('opcion_b')
+        opcion_c = pregunta.get('opcion_c')
+        opcion_d = pregunta.get('opcion_d')
+        respuesta_correcta = pregunta.get('respuesta_correcta')
 
-    # Cerrar la conexión
+        cursor.execute("""
+            INSERT INTO preguntas_examen (pregunta, opcion_a, opcion_b, opcion_c, opcion_d, respuesta_correcta, examen_id)
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+        """, (texto, opcion_a, opcion_b, opcion_c, opcion_d, respuesta_correcta, examen_id))
+
+    connection.commit()
     cursor.close()
     connection.close()
 
-    return jsonify({"message": "Examen creado correctamente"}), 201  # 201 es el código para creación exitosa
+    return jsonify({"message": "Examen y preguntas creados correctamente"}), 201
 
 if __name__ == '__main__':
     app.run(debug=True)
-
-
