@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, StyleSheet } from 'react-native';
 import { useFonts } from 'expo-font';
 import { getData } from './src/services/api';
-import Modreportes  from './screens/8_mod_reportes/mod_reportes';
+import Inicio_de_app  from './screens/1_inicio_de_app/inicio_de_app';
 
 export default function App() {
   const [data, setData] = useState([]);
@@ -37,7 +37,7 @@ export default function App() {
 
   return (
     <View style={styles.container}>
-      <Modreportes />
+      <Inicio_de_app />
     </View>
   );
 }
